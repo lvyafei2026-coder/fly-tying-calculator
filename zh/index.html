@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fly Tying Material Calculator — Estimate Thread, Feathers and Wire</title>
+<meta name="description" content="Free fly tying calculator. Estimate how much thread, hackle, dubbing, and lead wire you need for any pattern — based on hook size, style, and quantity.">
+<meta name="keywords" content="fly tying calculator, fly tying materials, how much thread for flies, hackle calculator, fly tying cost estimator">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<meta name="theme-color" content="#1a3d2e">
+
+<link rel="canonical" href="https://toolara.dev/fly-tying-calculator/zh/">
+<link rel="alternate" hreflang="en" href="https://toolara.dev/fly-tying-calculator/">
+<link rel="alternate" hreflang="zh-Hans" href="https://toolara.dev/fly-tying-calculator/zh/">
+<link rel="alternate" hreflang="zh-Hant" href="https://toolara.dev/fly-tying-calculator/zh-tw/">
+<link rel="alternate" hreflang="ja" href="https://toolara.dev/fly-tying-calculator/ja/">
+<link rel="alternate" hreflang="ko" href="https://toolara.dev/fly-tying-calculator/ko/">
+<link rel="alternate" hreflang="de" href="https://toolara.dev/fly-tying-calculator/de/">
+<link rel="alternate" hreflang="ru" href="https://toolara.dev/fly-tying-calculator/ru/">
+<link rel="alternate" hreflang="es" href="https://toolara.dev/fly-tying-calculator/es/">
+<link rel="alternate" hreflang="x-default" href="https://toolara.dev/fly-tying-calculator/">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Fly Tying Material Calculator">
+<meta property="og:description" content="Estimate thread, hackle, dubbing, and wire for any fly pattern.">
+<meta property="og:url" content="https://toolara.dev/fly-tying-calculator/zh/">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Fly Tying Material Calculator",
+  "url": "https://toolara.dev/fly-tying-calculator/zh/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "description": "Free calculator that estimates fly tying material quantities and costs.",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+}
+</script>
+
+<script>window.__FORCE_LANG__ = 'zh';</script>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="hero">
+  <div class="lang-switch">
+    <select id="langSelect" onchange="setLang(this.value)" aria-label="Language">
+      <option value="en">English</option>
+      <option value="zh">简体中文</option>
+      <option value="zh-TW">繁體中文</option>
+      <option value="ja">日本語</option>
+      <option value="ko">한국어</option>
+      <option value="de">Deutsch</option>
+      <option value="ru">Русский</option>
+      <option value="es">Español</option>
+    </select>
+  </div>
+  <div class="hero-inner">
+    <div class="hero-badge">🪝 Fly Tying</div>
+    <h1 data-i18n="title">Fly Tying Material Calculator</h1>
+    <p data-i18n="subtitle">Estimate thread, hackle, dubbing, and wire for any pattern — before you tie a single fly.</p>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="card">
+    <h2 class="visually-hidden" data-i18n="calcHeading">Calculator</h2>
+
+    <div class="row">
+      <div>
+        <label for="quantity" data-i18n="qtyLabel">Number of flies</label>
+        <input type="number" id="quantity" min="1" step="1" placeholder="24" value="24" inputmode="numeric">
+      </div>
+      <div>
+        <label for="hookSize" data-i18n="hookLabel">Hook size</label>
+        <select id="hookSize">
+          <option value="2">#2</option>
+          <option value="4">#4</option>
+          <option value="6">#6</option>
+          <option value="8">#8</option>
+          <option value="10">#10</option>
+          <option value="12">#12</option>
+          <option value="14" selected>#14</option>
+          <option value="16">#16</option>
+          <option value="18">#18</option>
+          <option value="20">#20</option>
+          <option value="22">#22</option>
+        </select>
+      </div>
+    </div>
+
+    <label for="style" data-i18n="styleLabel">Fly style</label>
+    <select id="style">
+      <option value="dry" selected data-i18n="styleDry">Dry fly</option>
+      <option value="wet" data-i18n="styleWet">Wet fly</option>
+      <option value="nymph" data-i18n="styleNymph">Nymph</option>
+      <option value="streamer" data-i18n="styleStreamer">Streamer</option>
+    </select>
+
+    <div class="row">
+      <div>
+        <label for="threadPrice" data-i18n="threadLabel">Thread spool price ($)</label>
+        <input type="number" id="threadPrice" min="0" step="0.5" placeholder="4" value="4" inputmode="decimal">
+      </div>
+      <div>
+        <label for="hacklePrice" data-i18n="hackleLabel">Hackle price ($ per pack)</label>
+        <input type="number" id="hacklePrice" min="0" step="0.5" placeholder="12" value="12" inputmode="decimal">
+      </div>
+    </div>
+
+    <button class="calc" type="button" onclick="calculate()" data-i18n="calcBtn">Calculate materials</button>
+
+    <div id="result" role="region" aria-live="polite">
+      <div class="result-label" data-i18n="resultLabel">Materials needed for</div>
+      <div class="total-flies"><span id="totalFlies">—</span></div>
+
+      <div class="breakdown">
+        <div class="bd-row"><span data-i18n="bdThread">Thread</span><strong id="bdThread">—</strong></div>
+        <div class="bd-row"><span data-i18n="bdHackle">Hackle feathers</span><strong id="bdHackle">—</strong></div>
+        <div class="bd-row"><span data-i18n="bdDubbing">Dubbing</span><strong id="bdDubbing">—</strong></div>
+        <div class="bd-row"><span data-i18n="bdWire">Lead wire</span><strong id="bdWire">—</strong></div>
+        <div class="bd-row"><span data-i18n="bdHooks">Hooks</span><strong id="bdHooks">—</strong></div>
+        <div class="bd-divider"></div>
+        <div class="bd-row bd-total"><span data-i18n="bdCost">Estimated material cost</span><strong id="bdCost">—</strong></div>
+      </div>
+      <div class="result-disclaimer" data-i18n="resultDisclaimer">Estimate only. Actual material usage varies by pattern, tying style, and individual technique. Always buy a little extra.</div>
+    </div>
+  </section>
+
+  <section>
+    <h2 data-i18n="whatIsTitle">How material usage is estimated</h2>
+    <p data-i18n="whatIsText">Fly tying material consumption depends on three main factors: the hook size (which determines the scale of the fly), the style of fly (dry, wet, nymph, or streamer), and the total quantity you plan to tie. This calculator combines these into a practical material shopping list so you can plan your session and budget before you sit at the vise.</p>
+  </section>
+
+  <section>
+    <h2 data-i18n="factorsTitle">What affects material usage</h2>
+    <h3 data-i18n="f1Title">Hook size</h3>
+    <p data-i18n="f1Text">A #4 streamer hook uses roughly 4 times the thread and materials of a #16 dry fly hook. As hook size increases (lower number), material needs scale up significantly.</p>
+
+    <h3 data-i18n="f2Title">Fly style</h3>
+    <ul>
+      <li data-i18n="f2a"><strong>Dry fly:</strong> baseline — light materials, hackle-heavy</li>
+      <li data-i18n="f2b"><strong>Wet fly:</strong> ~10% more thread, slightly more dubbing</li>
+      <li data-i18n="f2c"><strong>Nymph:</strong> ~20% more, plus lead wire for weight</li>
+      <li data-i18n="f2d"><strong>Streamer:</strong> ~60% more — larger hooks, more materials per fly</li>
+    </ul>
+
+    <h3 data-i18n="f3Title">Materials tracked</h3>
+    <ul>
+      <li data-i18n="f3a"><strong>Thread:</strong> measured in meters — the backbone of every fly</li>
+      <li data-i18n="f3b"><strong>Hackle:</strong> feathers wrapped around the hook for legs and movement</li>
+      <li data-i18n="f3c"><strong>Dubbing:</strong> fur or synthetic blend for the body</li>
+      <li data-i18n="f3d"><strong>Lead wire:</strong> for weight, used mainly in nymphs and streamers</li>
+      <li data-i18n="f3e"><strong>Hooks:</strong> one per fly (plus a few for practice)</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2 data-i18n="howToTitle">How to use this calculator</h2>
+    <ol>
+      <li data-i18n="howTo1">Enter the number of flies you plan to tie.</li>
+      <li data-i18n="howTo2">Choose your hook size — this is the biggest factor.</li>
+      <li data-i18n="howTo3">Select the fly style you're tying.</li>
+      <li data-i18n="howTo4">Enter current prices for thread and hackle to see material cost.</li>
+      <li data-i18n="howTo5">Click "Calculate materials" to see your shopping list.</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2 data-i18n="faqTitle">Frequently asked questions</h2>
+    <h3 data-i18n="faq1q">How much thread does one fly use?</h3>
+    <p data-i18n="faq1a">A typical #14 dry fly uses about 40–60 cm of thread. A #4 streamer can use 1.5–2 meters. A standard 100-meter spool of 8/0 thread can tie roughly 200–300 dry flies or 50–70 streamers.</p>
+
+    <h3 data-i18n="faq2q">How many flies can I tie with one hackle pack?</h3>
+    <p data-i18n="faq2a">A quality dry fly hackle pack (like Whiting or Metz) contains enough feathers for 100–300 flies, depending on hook size. Smaller hooks (#18–22) use less hackle per fly and stretch farther.</p>
+
+    <h3 data-i18n="faq3q">Do I really need lead wire?</h3>
+    <p data-i18n="faq3a">For nymphs and streamers that need to sink quickly, yes. For dry flies, never — weight would prevent them from floating. Many modern tyers use tungsten or lead-free wire alternatives, which are denser and more environmentally friendly.</p>
+
+    <h3 data-i18n="faq4q">Why buy extra materials?</h3>
+    <p data-i18n="faq4a">Materials get wasted in three ways: mistakes while learning a new pattern, variation between flies (some come out heavier than others), and loss during fishing. Buy 20–30% more than the calculator suggests, especially for a new pattern.</p>
+
+    <div class="disclaimer" data-i18n="disclaimer"><strong>Note:</strong> This is an estimate for planning purposes. Actual material usage varies by pattern and individual tying style. Always start with a little extra on hand.</div>
+  </section>
+</main>
+
+<footer class="footer" data-i18n="footer">Runs entirely in your browser. No data is collected or stored.</footer>
+
+<script src="js/i18n.js"></script>
+<script src="js/calculator.js"></script>
+</body>
+</html>
