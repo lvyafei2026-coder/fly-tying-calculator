@@ -61,22 +61,22 @@
   </div>
   <div class="hero-inner">
     <div class="hero-badge">🪝 Fly Tying</div>
-    <h1 data-i18n="title">Fly Tying Material Calculator</h1>
-    <p data-i18n="subtitle">Estimate thread, hackle, dubbing, and wire for any pattern — before you tie a single fly.</p>
+    <h1 data-i18n="title">Calculadora de Materiales para Montaje de Moscas</h1>
+    <p data-i18n="subtitle">Estime hilo, pluma, dubbing y alambre para cualquier patrón — antes de montar una sola mosca.</p>
   </div>
 </header>
 
 <main class="wrap">
   <section class="card">
-    <h2 class="visually-hidden" data-i18n="calcHeading">Calculator</h2>
+    <h2 class="visually-hidden" data-i18n="calcHeading">Calculadora</h2>
 
     <div class="row">
       <div>
-        <label for="quantity" data-i18n="qtyLabel">Number of flies</label>
+        <label for="quantity" data-i18n="qtyLabel">Número de moscas</label>
         <input type="number" id="quantity" min="1" step="1" placeholder="24" value="24" inputmode="numeric">
       </div>
       <div>
-        <label for="hookSize" data-i18n="hookLabel">Hook size</label>
+        <label for="hookSize" data-i18n="hookLabel">Tamaño del anzuelo</label>
         <select id="hookSize">
           <option value="2">#2</option>
           <option value="4">#4</option>
@@ -93,102 +93,102 @@
       </div>
     </div>
 
-    <label for="style" data-i18n="styleLabel">Fly style</label>
+    <label for="style" data-i18n="styleLabel">Estilo de mosca</label>
     <select id="style">
-      <option value="dry" selected data-i18n="styleDry">Dry fly</option>
-      <option value="wet" data-i18n="styleWet">Wet fly</option>
-      <option value="nymph" data-i18n="styleNymph">Nymph</option>
+      <option value="dry" selected data-i18n="styleDry">Mosca seca</option>
+      <option value="wet" data-i18n="styleWet">Mosca ahogada</option>
+      <option value="nymph" data-i18n="styleNymph">Ninfa</option>
       <option value="streamer" data-i18n="styleStreamer">Streamer</option>
     </select>
 
     <div class="row">
       <div>
-        <label for="threadPrice" data-i18n="threadLabel">Thread spool price ($)</label>
+        <label for="threadPrice" data-i18n="threadLabel">Precio del carrete de hilo ($)</label>
         <input type="number" id="threadPrice" min="0" step="0.5" placeholder="4" value="4" inputmode="decimal">
       </div>
       <div>
-        <label for="hacklePrice" data-i18n="hackleLabel">Hackle price ($ per pack)</label>
+        <label for="hacklePrice" data-i18n="hackleLabel">Precio de pluma ($ por paquete)</label>
         <input type="number" id="hacklePrice" min="0" step="0.5" placeholder="12" value="12" inputmode="decimal">
       </div>
     </div>
 
-    <button class="calc" type="button" onclick="calculate()" data-i18n="calcBtn">Calculate materials</button>
+    <button class="calc" type="button" onclick="calculate()" data-i18n="calcBtn">Calcular materiales</button>
 
     <div id="result" role="region" aria-live="polite">
-      <div class="result-label" data-i18n="resultLabel">Materials needed for</div>
+      <div class="result-label" data-i18n="resultLabel">Materiales necesarios para</div>
       <div class="total-flies"><span id="totalFlies">—</span></div>
 
       <div class="breakdown">
-        <div class="bd-row"><span data-i18n="bdThread">Thread</span><strong id="bdThread">—</strong></div>
-        <div class="bd-row"><span data-i18n="bdHackle">Hackle feathers</span><strong id="bdHackle">—</strong></div>
+        <div class="bd-row"><span data-i18n="bdThread">Hilo</span><strong id="bdThread">—</strong></div>
+        <div class="bd-row"><span data-i18n="bdHackle">Plumas</span><strong id="bdHackle">—</strong></div>
         <div class="bd-row"><span data-i18n="bdDubbing">Dubbing</span><strong id="bdDubbing">—</strong></div>
-        <div class="bd-row"><span data-i18n="bdWire">Lead wire</span><strong id="bdWire">—</strong></div>
-        <div class="bd-row"><span data-i18n="bdHooks">Hooks</span><strong id="bdHooks">—</strong></div>
+        <div class="bd-row"><span data-i18n="bdWire">Alambre de plomo</span><strong id="bdWire">—</strong></div>
+        <div class="bd-row"><span data-i18n="bdHooks">Anzuelos</span><strong id="bdHooks">—</strong></div>
         <div class="bd-divider"></div>
-        <div class="bd-row bd-total"><span data-i18n="bdCost">Estimated material cost</span><strong id="bdCost">—</strong></div>
+        <div class="bd-row bd-total"><span data-i18n="bdCost">Coste estimado de materiales</span><strong id="bdCost">—</strong></div>
       </div>
-      <div class="result-disclaimer" data-i18n="resultDisclaimer">Estimate only. Actual material usage varies by pattern, tying style, and individual technique. Always buy a little extra.</div>
+      <div class="result-disclaimer" data-i18n="resultDisclaimer">Solo una estimación. El uso real varía según el patrón, el estilo de montaje y la técnica individual. Siempre compre un poco más.</div>
     </div>
   </section>
 
   <section>
-    <h2 data-i18n="whatIsTitle">How material usage is estimated</h2>
-    <p data-i18n="whatIsText">Fly tying material consumption depends on three main factors: the hook size (which determines the scale of the fly), the style of fly (dry, wet, nymph, or streamer), and the total quantity you plan to tie. This calculator combines these into a practical material shopping list so you can plan your session and budget before you sit at the vise.</p>
+    <h2 data-i18n="whatIsTitle">Cómo se estima el uso de materiales</h2>
+    <p data-i18n="whatIsText">El consumo de materiales en el montaje de moscas depende de tres factores principales: el tamaño del anzuelo (que determina la escala de la mosca), el estilo de la mosca (seca, ahogada, ninfa o streamer) y la cantidad total que planea montar. Esta calculadora los combina en una lista práctica de compras para que pueda planificar su sesión y presupuesto antes de sentarse al tornillo.</p>
   </section>
 
   <section>
-    <h2 data-i18n="factorsTitle">What affects material usage</h2>
-    <h3 data-i18n="f1Title">Hook size</h3>
-    <p data-i18n="f1Text">A #4 streamer hook uses roughly 4 times the thread and materials of a #16 dry fly hook. As hook size increases (lower number), material needs scale up significantly.</p>
+    <h2 data-i18n="factorsTitle">Qué afecta al uso de materiales</h2>
+    <h3 data-i18n="f1Title">Tamaño del anzuelo</h3>
+    <p data-i18n="f1Text">Un anzuelo #4 para streamer usa aproximadamente 4 veces el hilo y materiales de un anzuelo #16 para mosca seca. A medida que aumenta el tamaño del anzuelo (número menor), la necesidad de materiales crece significativamente.</p>
 
-    <h3 data-i18n="f2Title">Fly style</h3>
+    <h3 data-i18n="f2Title">Estilo de mosca</h3>
     <ul>
-      <li data-i18n="f2a"><strong>Dry fly:</strong> baseline — light materials, hackle-heavy</li>
-      <li data-i18n="f2b"><strong>Wet fly:</strong> ~10% more thread, slightly more dubbing</li>
-      <li data-i18n="f2c"><strong>Nymph:</strong> ~20% more, plus lead wire for weight</li>
-      <li data-i18n="f2d"><strong>Streamer:</strong> ~60% more — larger hooks, more materials per fly</li>
+      <li data-i18n="f2a">Mosca seca: base — materiales ligeros, mucha pluma</li>
+      <li data-i18n="f2b">Mosca ahogada: ~10% más hilo, algo más de dubbing</li>
+      <li data-i18n="f2c">Ninfa: ~20% más, más alambre de plomo para peso</li>
+      <li data-i18n="f2d">Streamer: ~60% más — anzuelos más grandes, más materiales por mosca</li>
     </ul>
 
-    <h3 data-i18n="f3Title">Materials tracked</h3>
+    <h3 data-i18n="f3Title">Materiales rastreados</h3>
     <ul>
-      <li data-i18n="f3a"><strong>Thread:</strong> measured in meters — the backbone of every fly</li>
-      <li data-i18n="f3b"><strong>Hackle:</strong> feathers wrapped around the hook for legs and movement</li>
-      <li data-i18n="f3c"><strong>Dubbing:</strong> fur or synthetic blend for the body</li>
-      <li data-i18n="f3d"><strong>Lead wire:</strong> for weight, used mainly in nymphs and streamers</li>
-      <li data-i18n="f3e"><strong>Hooks:</strong> one per fly (plus a few for practice)</li>
+      <li data-i18n="f3a">Hilo: medido en metros — la columna vertebral de cada mosca</li>
+      <li data-i18n="f3b">Pluma: envuelta alrededor del anzuelo para patas y movimiento</li>
+      <li data-i18n="f3c">Dubbing: piel o mezcla sintética para el cuerpo</li>
+      <li data-i18n="f3d">Alambre de plomo: para peso, usado principalmente en ninfas y streamers</li>
+      <li data-i18n="f3e">Anzuelos: uno por mosca (más algunos para practicar)</li>
     </ul>
   </section>
 
   <section>
-    <h2 data-i18n="howToTitle">How to use this calculator</h2>
+    <h2 data-i18n="howToTitle">Cómo usar esta calculadora</h2>
     <ol>
-      <li data-i18n="howTo1">Enter the number of flies you plan to tie.</li>
-      <li data-i18n="howTo2">Choose your hook size — this is the biggest factor.</li>
-      <li data-i18n="howTo3">Select the fly style you're tying.</li>
-      <li data-i18n="howTo4">Enter current prices for thread and hackle to see material cost.</li>
-      <li data-i18n="howTo5">Click "Calculate materials" to see your shopping list.</li>
+      <li data-i18n="howTo1">Introduzca el número de moscas que planea montar.</li>
+      <li data-i18n="howTo2">Elija el tamaño del anzuelo — este es el factor más importante.</li>
+      <li data-i18n="howTo3">Seleccione el estilo de mosca que está montando.</li>
+      <li data-i18n="howTo4">Introduzca los precios actuales de hilo y pluma para ver el coste de materiales.</li>
+      <li data-i18n="howTo5">Haga clic en "Calcular materiales" para ver su lista de compras.</li>
     </ol>
   </section>
 
   <section>
-    <h2 data-i18n="faqTitle">Frequently asked questions</h2>
-    <h3 data-i18n="faq1q">How much thread does one fly use?</h3>
-    <p data-i18n="faq1a">A typical #14 dry fly uses about 40–60 cm of thread. A #4 streamer can use 1.5–2 meters. A standard 100-meter spool of 8/0 thread can tie roughly 200–300 dry flies or 50–70 streamers.</p>
+    <h2 data-i18n="faqTitle">Preguntas frecuentes</h2>
+    <h3 data-i18n="faq1q">¿Cuánto hilo usa una mosca?</h3>
+    <p data-i18n="faq1a">Una mosca seca típica #14 usa unos 40–60 cm de hilo. Un streamer #4 puede usar 1,5–2 metros. Un carrete estándar de 100 metros de hilo 8/0 puede montar aproximadamente 200–300 moscas secas o 50–70 streamers.</p>
 
-    <h3 data-i18n="faq2q">How many flies can I tie with one hackle pack?</h3>
-    <p data-i18n="faq2a">A quality dry fly hackle pack (like Whiting or Metz) contains enough feathers for 100–300 flies, depending on hook size. Smaller hooks (#18–22) use less hackle per fly and stretch farther.</p>
+    <h3 data-i18n="faq2q">¿Cuántas moscas puedo montar con un paquete de pluma?</h3>
+    <p data-i18n="faq2a">Un paquete de pluma de calidad para mosca seca (como Whiting o Metz) contiene suficientes plumas para 100–300 moscas, según el tamaño del anzuelo. Los anzuelos pequeños (#18–22) usan menos pluma por mosca y duran más.</p>
 
-    <h3 data-i18n="faq3q">Do I really need lead wire?</h3>
-    <p data-i18n="faq3a">For nymphs and streamers that need to sink quickly, yes. For dry flies, never — weight would prevent them from floating. Many modern tyers use tungsten or lead-free wire alternatives, which are denser and more environmentally friendly.</p>
+    <h3 data-i18n="faq3q">¿Realmente necesito alambre de plomo?</h3>
+    <p data-i18n="faq3a">Para ninfas y streamers que necesitan hundirse rápidamente, sí. Para moscas secas, nunca — el peso les impediría flotar. Muchos montadores modernos usan tungsteno o alternativas sin plomo, que son más densas y respetuosas con el medio ambiente.</p>
 
-    <h3 data-i18n="faq4q">Why buy extra materials?</h3>
-    <p data-i18n="faq4a">Materials get wasted in three ways: mistakes while learning a new pattern, variation between flies (some come out heavier than others), and loss during fishing. Buy 20–30% more than the calculator suggests, especially for a new pattern.</p>
+    <h3 data-i18n="faq4q">¿Por qué comprar materiales extra?</h3>
+    <p data-i18n="faq4a">Los materiales se desperdician de tres maneras: errores al aprender un nuevo patrón, variación entre moscas (algunas salen más pesadas), y pérdida durante la pesca. Compre un 20–30% más de lo que sugiere la calculadora, especialmente para un patrón nuevo.</p>
 
-    <div class="disclaimer" data-i18n="disclaimer"><strong>Note:</strong> This is an estimate for planning purposes. Actual material usage varies by pattern and individual tying style. Always start with a little extra on hand.</div>
+    <div class="disclaimer" data-i18n="disclaimer"><strong>Nota:</strong> Esta es una estimación para fines de planificación. El uso real varía según el patrón y el estilo de montaje individual. Siempre empiece con un poco extra a mano.</div>
   </section>
 </main>
 
-<footer class="footer" data-i18n="footer">Runs entirely in your browser. No data is collected or stored.</footer>
+<footer class="footer" data-i18n="footer">Se ejecuta completamente en su navegador. No se recopilan ni almacenan datos.</footer>
 
 <script src="js/i18n.js"></script>
 <script src="js/calculator.js"></script>

@@ -61,22 +61,22 @@
   </div>
   <div class="hero-inner">
     <div class="hero-badge">🪝 Fly Tying</div>
-    <h1 data-i18n="title">Fly Tying Material Calculator</h1>
-    <p data-i18n="subtitle">Estimate thread, hackle, dubbing, and wire for any pattern — before you tie a single fly.</p>
+    <h1 data-i18n="title">飞蝇绑制材料计算器</h1>
+    <p data-i18n="subtitle">在绑制每一只飞蝇之前，估算所需的绑线、羽毛、毛绒和铅丝。</p>
   </div>
 </header>
 
 <main class="wrap">
   <section class="card">
-    <h2 class="visually-hidden" data-i18n="calcHeading">Calculator</h2>
+    <h2 class="visually-hidden" data-i18n="calcHeading">计算器</h2>
 
     <div class="row">
       <div>
-        <label for="quantity" data-i18n="qtyLabel">Number of flies</label>
+        <label for="quantity" data-i18n="qtyLabel">飞蝇数量</label>
         <input type="number" id="quantity" min="1" step="1" placeholder="24" value="24" inputmode="numeric">
       </div>
       <div>
-        <label for="hookSize" data-i18n="hookLabel">Hook size</label>
+        <label for="hookSize" data-i18n="hookLabel">鱼钩型号</label>
         <select id="hookSize">
           <option value="2">#2</option>
           <option value="4">#4</option>
@@ -93,102 +93,102 @@
       </div>
     </div>
 
-    <label for="style" data-i18n="styleLabel">Fly style</label>
+    <label for="style" data-i18n="styleLabel">飞蝇类型</label>
     <select id="style">
-      <option value="dry" selected data-i18n="styleDry">Dry fly</option>
-      <option value="wet" data-i18n="styleWet">Wet fly</option>
-      <option value="nymph" data-i18n="styleNymph">Nymph</option>
-      <option value="streamer" data-i18n="styleStreamer">Streamer</option>
+      <option value="dry" selected data-i18n="styleDry">干蝇</option>
+      <option value="wet" data-i18n="styleWet">湿蝇</option>
+      <option value="nymph" data-i18n="styleNymph">若虫</option>
+      <option value="streamer" data-i18n="styleStreamer">饰带蝇</option>
     </select>
 
     <div class="row">
       <div>
-        <label for="threadPrice" data-i18n="threadLabel">Thread spool price ($)</label>
+        <label for="threadPrice" data-i18n="threadLabel">绑线卷价格（美元）</label>
         <input type="number" id="threadPrice" min="0" step="0.5" placeholder="4" value="4" inputmode="decimal">
       </div>
       <div>
-        <label for="hacklePrice" data-i18n="hackleLabel">Hackle price ($ per pack)</label>
+        <label for="hacklePrice" data-i18n="hackleLabel">羽毛包价格（美元）</label>
         <input type="number" id="hacklePrice" min="0" step="0.5" placeholder="12" value="12" inputmode="decimal">
       </div>
     </div>
 
-    <button class="calc" type="button" onclick="calculate()" data-i18n="calcBtn">Calculate materials</button>
+    <button class="calc" type="button" onclick="calculate()" data-i18n="calcBtn">计算材料用量</button>
 
     <div id="result" role="region" aria-live="polite">
-      <div class="result-label" data-i18n="resultLabel">Materials needed for</div>
+      <div class="result-label" data-i18n="resultLabel">所需材料</div>
       <div class="total-flies"><span id="totalFlies">—</span></div>
 
       <div class="breakdown">
-        <div class="bd-row"><span data-i18n="bdThread">Thread</span><strong id="bdThread">—</strong></div>
-        <div class="bd-row"><span data-i18n="bdHackle">Hackle feathers</span><strong id="bdHackle">—</strong></div>
-        <div class="bd-row"><span data-i18n="bdDubbing">Dubbing</span><strong id="bdDubbing">—</strong></div>
-        <div class="bd-row"><span data-i18n="bdWire">Lead wire</span><strong id="bdWire">—</strong></div>
-        <div class="bd-row"><span data-i18n="bdHooks">Hooks</span><strong id="bdHooks">—</strong></div>
+        <div class="bd-row"><span data-i18n="bdThread">绑线</span><strong id="bdThread">—</strong></div>
+        <div class="bd-row"><span data-i18n="bdHackle">羽毛</span><strong id="bdHackle">—</strong></div>
+        <div class="bd-row"><span data-i18n="bdDubbing">毛绒</span><strong id="bdDubbing">—</strong></div>
+        <div class="bd-row"><span data-i18n="bdWire">铅丝</span><strong id="bdWire">—</strong></div>
+        <div class="bd-row"><span data-i18n="bdHooks">鱼钩</span><strong id="bdHooks">—</strong></div>
         <div class="bd-divider"></div>
-        <div class="bd-row bd-total"><span data-i18n="bdCost">Estimated material cost</span><strong id="bdCost">—</strong></div>
+        <div class="bd-row bd-total"><span data-i18n="bdCost">预估材料成本</span><strong id="bdCost">—</strong></div>
       </div>
-      <div class="result-disclaimer" data-i18n="resultDisclaimer">Estimate only. Actual material usage varies by pattern, tying style, and individual technique. Always buy a little extra.</div>
+      <div class="result-disclaimer" data-i18n="resultDisclaimer">仅为估算值。实际用量会因图案、绑制风格和个人技法而不同。建议多买一些备用。</div>
     </div>
   </section>
 
   <section>
-    <h2 data-i18n="whatIsTitle">How material usage is estimated</h2>
-    <p data-i18n="whatIsText">Fly tying material consumption depends on three main factors: the hook size (which determines the scale of the fly), the style of fly (dry, wet, nymph, or streamer), and the total quantity you plan to tie. This calculator combines these into a practical material shopping list so you can plan your session and budget before you sit at the vise.</p>
+    <h2 data-i18n="whatIsTitle">材料用量是如何估算的</h2>
+    <p data-i18n="whatIsText">飞蝇绑制材料消耗量取决于三个主要因素：鱼钩型号（决定飞蝇的尺寸）、飞蝇类型（干蝇、湿蝇、若虫或饰带蝇）以及计划绑制的总数量。本计算器综合这些因素，生成实用的材料清单，帮助您在坐到绑制台前做好预算和规划。</p>
   </section>
 
   <section>
-    <h2 data-i18n="factorsTitle">What affects material usage</h2>
-    <h3 data-i18n="f1Title">Hook size</h3>
-    <p data-i18n="f1Text">A #4 streamer hook uses roughly 4 times the thread and materials of a #16 dry fly hook. As hook size increases (lower number), material needs scale up significantly.</p>
+    <h2 data-i18n="factorsTitle">影响材料用量的因素</h2>
+    <h3 data-i18n="f1Title">鱼钩型号</h3>
+    <p data-i18n="f1Text">一个 #4 饰带蝇鱼钩使用的绑线和材料，大约是 #16 干蝇鱼钩的 4 倍。钩号越大（数字越小），材料需求显著增加。</p>
 
-    <h3 data-i18n="f2Title">Fly style</h3>
+    <h3 data-i18n="f2Title">飞蝇类型</h3>
     <ul>
-      <li data-i18n="f2a"><strong>Dry fly:</strong> baseline — light materials, hackle-heavy</li>
-      <li data-i18n="f2b"><strong>Wet fly:</strong> ~10% more thread, slightly more dubbing</li>
-      <li data-i18n="f2c"><strong>Nymph:</strong> ~20% more, plus lead wire for weight</li>
-      <li data-i18n="f2d"><strong>Streamer:</strong> ~60% more — larger hooks, more materials per fly</li>
+      <li data-i18n="f2a">干蝇：基准——材料轻，羽毛用量大</li>
+      <li data-i18n="f2b">湿蝇：绑线约多 10%，毛绒略多</li>
+      <li data-i18n="f2c">若虫：约多 20%，并需要铅丝配重</li>
+      <li data-i18n="f2d">饰带蝇：约多 60%——钩子更大，每只飞蝇用材更多</li>
     </ul>
 
-    <h3 data-i18n="f3Title">Materials tracked</h3>
+    <h3 data-i18n="f3Title">跟踪的材料</h3>
     <ul>
-      <li data-i18n="f3a"><strong>Thread:</strong> measured in meters — the backbone of every fly</li>
-      <li data-i18n="f3b"><strong>Hackle:</strong> feathers wrapped around the hook for legs and movement</li>
-      <li data-i18n="f3c"><strong>Dubbing:</strong> fur or synthetic blend for the body</li>
-      <li data-i18n="f3d"><strong>Lead wire:</strong> for weight, used mainly in nymphs and streamers</li>
-      <li data-i18n="f3e"><strong>Hooks:</strong> one per fly (plus a few for practice)</li>
+      <li data-i18n="f3a">绑线：以米计量——每只飞蝇的骨架</li>
+      <li data-i18n="f3b">羽毛：缠绕在鱼钩上，形成腿部和动态</li>
+      <li data-i18n="f3c">毛绒：用于身体的毛皮或合成混纺材料</li>
+      <li data-i18n="f3d">铅丝：用于配重，主要用于若虫和饰带蝇</li>
+      <li data-i18n="f3e">鱼钩：每只飞蝇一个（另备几个练习用）</li>
     </ul>
   </section>
 
   <section>
-    <h2 data-i18n="howToTitle">How to use this calculator</h2>
+    <h2 data-i18n="howToTitle">如何使用本计算器</h2>
     <ol>
-      <li data-i18n="howTo1">Enter the number of flies you plan to tie.</li>
-      <li data-i18n="howTo2">Choose your hook size — this is the biggest factor.</li>
-      <li data-i18n="howTo3">Select the fly style you're tying.</li>
-      <li data-i18n="howTo4">Enter current prices for thread and hackle to see material cost.</li>
-      <li data-i18n="howTo5">Click "Calculate materials" to see your shopping list.</li>
+      <li data-i18n="howTo1">输入计划绑制的飞蝇数量。</li>
+      <li data-i18n="howTo2">选择鱼钩型号——这是最重要的因素。</li>
+      <li data-i18n="howTo3">选择要绑制的飞蝇类型。</li>
+      <li data-i18n="howTo4">输入绑线和羽毛的当前价格，查看材料成本。</li>
+      <li data-i18n="howTo5">点击“计算材料用量”，查看购物清单。</li>
     </ol>
   </section>
 
   <section>
-    <h2 data-i18n="faqTitle">Frequently asked questions</h2>
-    <h3 data-i18n="faq1q">How much thread does one fly use?</h3>
-    <p data-i18n="faq1a">A typical #14 dry fly uses about 40–60 cm of thread. A #4 streamer can use 1.5–2 meters. A standard 100-meter spool of 8/0 thread can tie roughly 200–300 dry flies or 50–70 streamers.</p>
+    <h2 data-i18n="faqTitle">常见问题</h2>
+    <h3 data-i18n="faq1q">一只飞蝇用多少绑线？</h3>
+    <p data-i18n="faq1a">一只典型的 #14 干蝇使用约 40–60 厘米绑线。一只 #4 饰带蝇可能使用 1.5–2 米。一卷标准的 100 米 8/0 绑线大约可绑 200–300 只干蝇或 50–70 只饰带蝇。</p>
 
-    <h3 data-i18n="faq2q">How many flies can I tie with one hackle pack?</h3>
-    <p data-i18n="faq2a">A quality dry fly hackle pack (like Whiting or Metz) contains enough feathers for 100–300 flies, depending on hook size. Smaller hooks (#18–22) use less hackle per fly and stretch farther.</p>
+    <h3 data-i18n="faq2q">一包羽毛能绑多少只飞蝇？</h3>
+    <p data-i18n="faq2a">一包优质的干蝇羽毛（如 Whiting 或 Metz）含有的羽毛可供绑制 100–300 只飞蝇，具体取决于钩号。较小的钩子（#18–22）每只飞蝇用的羽毛更少，能绑更多。</p>
 
-    <h3 data-i18n="faq3q">Do I really need lead wire?</h3>
-    <p data-i18n="faq3a">For nymphs and streamers that need to sink quickly, yes. For dry flies, never — weight would prevent them from floating. Many modern tyers use tungsten or lead-free wire alternatives, which are denser and more environmentally friendly.</p>
+    <h3 data-i18n="faq3q">真的需要铅丝吗？</h3>
+    <p data-i18n="faq3a">对于需要快速下沉的若虫和饰带蝇，是的。对于干蝇，绝对不需要——配重会让它们无法漂浮。许多现代绑制者使用钨丝或无铅金属丝替代品，密度更高且更环保。</p>
 
-    <h3 data-i18n="faq4q">Why buy extra materials?</h3>
-    <p data-i18n="faq4a">Materials get wasted in three ways: mistakes while learning a new pattern, variation between flies (some come out heavier than others), and loss during fishing. Buy 20–30% more than the calculator suggests, especially for a new pattern.</p>
+    <h3 data-i18n="faq4q">为什么要多买材料？</h3>
+    <p data-i18n="faq4a">材料会在三个方面被浪费：学习新图案时的失误、飞蝇之间的差异（有些做得更重），以及钓鱼时的丢失。建议比计算器建议的多买 20–30%，尤其是新图案。</p>
 
-    <div class="disclaimer" data-i18n="disclaimer"><strong>Note:</strong> This is an estimate for planning purposes. Actual material usage varies by pattern and individual tying style. Always start with a little extra on hand.</div>
+    <div class="disclaimer" data-i18n="disclaimer"><strong>注意：</strong>本结果仅供计划参考。实际用量会因图案和个人绑制风格而不同。建议始终多准备一些。</div>
   </section>
 </main>
 
-<footer class="footer" data-i18n="footer">Runs entirely in your browser. No data is collected or stored.</footer>
+<footer class="footer" data-i18n="footer">完全在您的浏览器中运行。不收集、不存储任何数据。</footer>
 
 <script src="js/i18n.js"></script>
 <script src="js/calculator.js"></script>

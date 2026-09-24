@@ -61,22 +61,22 @@
   </div>
   <div class="hero-inner">
     <div class="hero-badge">🪝 Fly Tying</div>
-    <h1 data-i18n="title">Fly Tying Material Calculator</h1>
-    <p data-i18n="subtitle">Estimate thread, hackle, dubbing, and wire for any pattern — before you tie a single fly.</p>
+    <h1 data-i18n="title">플라이 타이잉 재료 계산기</h1>
+    <p data-i18n="subtitle">플라이 한 마리를 묶기 전에 필요한 스레드, 해클, 더빙, 와이어를 추정합니다.</p>
   </div>
 </header>
 
 <main class="wrap">
   <section class="card">
-    <h2 class="visually-hidden" data-i18n="calcHeading">Calculator</h2>
+    <h2 class="visually-hidden" data-i18n="calcHeading">계산기</h2>
 
     <div class="row">
       <div>
-        <label for="quantity" data-i18n="qtyLabel">Number of flies</label>
+        <label for="quantity" data-i18n="qtyLabel">플라이 수</label>
         <input type="number" id="quantity" min="1" step="1" placeholder="24" value="24" inputmode="numeric">
       </div>
       <div>
-        <label for="hookSize" data-i18n="hookLabel">Hook size</label>
+        <label for="hookSize" data-i18n="hookLabel">훅 사이즈</label>
         <select id="hookSize">
           <option value="2">#2</option>
           <option value="4">#4</option>
@@ -93,102 +93,102 @@
       </div>
     </div>
 
-    <label for="style" data-i18n="styleLabel">Fly style</label>
+    <label for="style" data-i18n="styleLabel">플라이 스타일</label>
     <select id="style">
-      <option value="dry" selected data-i18n="styleDry">Dry fly</option>
-      <option value="wet" data-i18n="styleWet">Wet fly</option>
-      <option value="nymph" data-i18n="styleNymph">Nymph</option>
-      <option value="streamer" data-i18n="styleStreamer">Streamer</option>
+      <option value="dry" selected data-i18n="styleDry">드라이 플라이</option>
+      <option value="wet" data-i18n="styleWet">웻 플라이</option>
+      <option value="nymph" data-i18n="styleNymph">님프</option>
+      <option value="streamer" data-i18n="styleStreamer">스트리머</option>
     </select>
 
     <div class="row">
       <div>
-        <label for="threadPrice" data-i18n="threadLabel">Thread spool price ($)</label>
+        <label for="threadPrice" data-i18n="threadLabel">스레드 스풀 가격 ($)</label>
         <input type="number" id="threadPrice" min="0" step="0.5" placeholder="4" value="4" inputmode="decimal">
       </div>
       <div>
-        <label for="hacklePrice" data-i18n="hackleLabel">Hackle price ($ per pack)</label>
+        <label for="hacklePrice" data-i18n="hackleLabel">해클 가격 ($/팩)</label>
         <input type="number" id="hacklePrice" min="0" step="0.5" placeholder="12" value="12" inputmode="decimal">
       </div>
     </div>
 
-    <button class="calc" type="button" onclick="calculate()" data-i18n="calcBtn">Calculate materials</button>
+    <button class="calc" type="button" onclick="calculate()" data-i18n="calcBtn">재료 계산</button>
 
     <div id="result" role="region" aria-live="polite">
-      <div class="result-label" data-i18n="resultLabel">Materials needed for</div>
+      <div class="result-label" data-i18n="resultLabel">필요한 재료</div>
       <div class="total-flies"><span id="totalFlies">—</span></div>
 
       <div class="breakdown">
-        <div class="bd-row"><span data-i18n="bdThread">Thread</span><strong id="bdThread">—</strong></div>
-        <div class="bd-row"><span data-i18n="bdHackle">Hackle feathers</span><strong id="bdHackle">—</strong></div>
-        <div class="bd-row"><span data-i18n="bdDubbing">Dubbing</span><strong id="bdDubbing">—</strong></div>
-        <div class="bd-row"><span data-i18n="bdWire">Lead wire</span><strong id="bdWire">—</strong></div>
-        <div class="bd-row"><span data-i18n="bdHooks">Hooks</span><strong id="bdHooks">—</strong></div>
+        <div class="bd-row"><span data-i18n="bdThread">스레드</span><strong id="bdThread">—</strong></div>
+        <div class="bd-row"><span data-i18n="bdHackle">해클</span><strong id="bdHackle">—</strong></div>
+        <div class="bd-row"><span data-i18n="bdDubbing">더빙</span><strong id="bdDubbing">—</strong></div>
+        <div class="bd-row"><span data-i18n="bdWire">리드 와이어</span><strong id="bdWire">—</strong></div>
+        <div class="bd-row"><span data-i18n="bdHooks">훅</span><strong id="bdHooks">—</strong></div>
         <div class="bd-divider"></div>
-        <div class="bd-row bd-total"><span data-i18n="bdCost">Estimated material cost</span><strong id="bdCost">—</strong></div>
+        <div class="bd-row bd-total"><span data-i18n="bdCost">예상 재료비</span><strong id="bdCost">—</strong></div>
       </div>
-      <div class="result-disclaimer" data-i18n="resultDisclaimer">Estimate only. Actual material usage varies by pattern, tying style, and individual technique. Always buy a little extra.</div>
+      <div class="result-disclaimer" data-i18n="resultDisclaimer">추정치입니다. 실제 재료 사용량은 패턴, 타이잉 스타일, 개인 기술에 따라 다릅니다. 항상 조금 더 구매하세요.</div>
     </div>
   </section>
 
   <section>
-    <h2 data-i18n="whatIsTitle">How material usage is estimated</h2>
-    <p data-i18n="whatIsText">Fly tying material consumption depends on three main factors: the hook size (which determines the scale of the fly), the style of fly (dry, wet, nymph, or streamer), and the total quantity you plan to tie. This calculator combines these into a practical material shopping list so you can plan your session and budget before you sit at the vise.</p>
+    <h2 data-i18n="whatIsTitle">재료 사용량 추정 방법</h2>
+    <p data-i18n="whatIsText">플라이 타이잉 재료 소비량은 세 가지 주요 요인에 따라 결정됩니다: 훅 사이즈(플라이의 크기 결정), 플라이 스타일(드라이, 웻, 님프, 스트리머), 그리고 묶을 총 개수. 이 계산기는 이를 결합하여 바이스에 앉기 전에 계획과 예산을 세울 수 있도록 합니다.</p>
   </section>
 
   <section>
-    <h2 data-i18n="factorsTitle">What affects material usage</h2>
-    <h3 data-i18n="f1Title">Hook size</h3>
-    <p data-i18n="f1Text">A #4 streamer hook uses roughly 4 times the thread and materials of a #16 dry fly hook. As hook size increases (lower number), material needs scale up significantly.</p>
+    <h2 data-i18n="factorsTitle">재료 사용량에 영향을 미치는 요인</h2>
+    <h3 data-i18n="f1Title">훅 사이즈</h3>
+    <p data-i18n="f1Text">#4 스트리머 훅은 #16 드라이 플라이 훅의 약 4배의 스레드와 재료를 사용합니다. 훅 사이즈가 커질수록(숫자가 작아질수록) 재료 필요량이 크게 증가합니다.</p>
 
-    <h3 data-i18n="f2Title">Fly style</h3>
+    <h3 data-i18n="f2Title">플라이 스타일</h3>
     <ul>
-      <li data-i18n="f2a"><strong>Dry fly:</strong> baseline — light materials, hackle-heavy</li>
-      <li data-i18n="f2b"><strong>Wet fly:</strong> ~10% more thread, slightly more dubbing</li>
-      <li data-i18n="f2c"><strong>Nymph:</strong> ~20% more, plus lead wire for weight</li>
-      <li data-i18n="f2d"><strong>Streamer:</strong> ~60% more — larger hooks, more materials per fly</li>
+      <li data-i18n="f2a">드라이 플라이: 기준 — 가벼운 재료, 해클 위주</li>
+      <li data-i18n="f2b">웻 플라이: 스레드 약 10% 증가, 더빙 약간 증가</li>
+      <li data-i18n="f2c">님프: 약 20% 증가, 무게용 리드 와이어 필요</li>
+      <li data-i18n="f2d">스트리머: 약 60% 증가 — 더 큰 훅, 플라이당 더 많은 재료</li>
     </ul>
 
-    <h3 data-i18n="f3Title">Materials tracked</h3>
+    <h3 data-i18n="f3Title">추적되는 재료</h3>
     <ul>
-      <li data-i18n="f3a"><strong>Thread:</strong> measured in meters — the backbone of every fly</li>
-      <li data-i18n="f3b"><strong>Hackle:</strong> feathers wrapped around the hook for legs and movement</li>
-      <li data-i18n="f3c"><strong>Dubbing:</strong> fur or synthetic blend for the body</li>
-      <li data-i18n="f3d"><strong>Lead wire:</strong> for weight, used mainly in nymphs and streamers</li>
-      <li data-i18n="f3e"><strong>Hooks:</strong> one per fly (plus a few for practice)</li>
+      <li data-i18n="f3a">스레드: 미터 단위 — 모든 플라이의 골격</li>
+      <li data-i18n="f3b">해클: 훅에 감아 다리와 움직임을 만드는 깃털</li>
+      <li data-i18n="f3c">더빙: 몸통용 모피 또는 합성 블렌드</li>
+      <li data-i18n="f3d">리드 와이어: 무게용, 주로 님프와 스트리머에 사용</li>
+      <li data-i18n="f3e">훅: 플라이당 1개 (연습용 몇 개 추가)</li>
     </ul>
   </section>
 
   <section>
-    <h2 data-i18n="howToTitle">How to use this calculator</h2>
+    <h2 data-i18n="howToTitle">사용 방법</h2>
     <ol>
-      <li data-i18n="howTo1">Enter the number of flies you plan to tie.</li>
-      <li data-i18n="howTo2">Choose your hook size — this is the biggest factor.</li>
-      <li data-i18n="howTo3">Select the fly style you're tying.</li>
-      <li data-i18n="howTo4">Enter current prices for thread and hackle to see material cost.</li>
-      <li data-i18n="howTo5">Click "Calculate materials" to see your shopping list.</li>
+      <li data-i18n="howTo1">묶을 플라이 수를 입력합니다.</li>
+      <li data-i18n="howTo2">훅 사이즈를 선택합니다 — 가장 큰 요인입니다.</li>
+      <li data-i18n="howTo3">묶을 플라이 스타일을 선택합니다.</li>
+      <li data-i18n="howTo4">스레드와 해클의 현재 가격을 입력하여 재료비를 확인합니다.</li>
+      <li data-i18n="howTo5">"재료 계산"을 클릭하여 쇼핑 목록을 확인합니다.</li>
     </ol>
   </section>
 
   <section>
-    <h2 data-i18n="faqTitle">Frequently asked questions</h2>
-    <h3 data-i18n="faq1q">How much thread does one fly use?</h3>
-    <p data-i18n="faq1a">A typical #14 dry fly uses about 40–60 cm of thread. A #4 streamer can use 1.5–2 meters. A standard 100-meter spool of 8/0 thread can tie roughly 200–300 dry flies or 50–70 streamers.</p>
+    <h2 data-i18n="faqTitle">자주 묻는 질문</h2>
+    <h3 data-i18n="faq1q">플라이 한 마리에 스레드가 얼마나 필요하나요?</h3>
+    <p data-i18n="faq1a">일반적인 #14 드라이 플라이는 약 40~60 cm의 스레드를 사용합니다. #4 스트리머는 1.5~2 미터를 사용할 수 있습니다. 표준 100미터 8/0 스레드 한 스풀로 드라이 플라이 약 200~300마리 또는 스트리머 50~70마리를 묶을 수 있습니다.</p>
 
-    <h3 data-i18n="faq2q">How many flies can I tie with one hackle pack?</h3>
-    <p data-i18n="faq2a">A quality dry fly hackle pack (like Whiting or Metz) contains enough feathers for 100–300 flies, depending on hook size. Smaller hooks (#18–22) use less hackle per fly and stretch farther.</p>
+    <h3 data-i18n="faq2q">해클 한 팩으로 몇 마리의 플라이를 묶을 수 있나요?</h3>
+    <p data-i18n="faq2a">고품질 드라이 플라이 해클 팩(Whiting 또는 Metz 등)은 훅 사이즈에 따라 100~300마리 분의 깃털을 포함합니다. 작은 훅(#18~22)은 플라이당 해클 사용량이 적어 더 오래갑니다.</p>
 
-    <h3 data-i18n="faq3q">Do I really need lead wire?</h3>
-    <p data-i18n="faq3a">For nymphs and streamers that need to sink quickly, yes. For dry flies, never — weight would prevent them from floating. Many modern tyers use tungsten or lead-free wire alternatives, which are denser and more environmentally friendly.</p>
+    <h3 data-i18n="faq3q">리드 와이어가 정말 필요한가요?</h3>
+    <p data-i18n="faq3a">빠르게 가라앉아야 하는 님프와 스트리머에는 필요합니다. 드라이 플라이에는 절대 불필요 — 무게가 있으면 뜨지 않습니다. 많은 현대 타이어는 텅스텐이나 무연 와이어 대안을 사용하며, 밀도가 높고 환경 친화적입니다.</p>
 
-    <h3 data-i18n="faq4q">Why buy extra materials?</h3>
-    <p data-i18n="faq4a">Materials get wasted in three ways: mistakes while learning a new pattern, variation between flies (some come out heavier than others), and loss during fishing. Buy 20–30% more than the calculator suggests, especially for a new pattern.</p>
+    <h3 data-i18n="faq4q">왜 재료를 더 사야 하나요?</h3>
+    <p data-i18n="faq4a">재료는 세 가지 방식으로 낭비됩니다: 새로운 패턴을 배울 때의 실수, 플라이 간의 차이(일부는 더 무겁게 나옴), 낚시 중 손실. 계산기가 제안하는 것보다 20~30% 더 구매하세요, 특히 새로운 패턴의 경우.</p>
 
-    <div class="disclaimer" data-i18n="disclaimer"><strong>Note:</strong> This is an estimate for planning purposes. Actual material usage varies by pattern and individual tying style. Always start with a little extra on hand.</div>
+    <div class="disclaimer" data-i18n="disclaimer"><strong>참고:</strong> 이것은 계획 목적의 추정치입니다. 실제 재료 사용량은 패턴과 개인 타이잉 스타일에 따라 다릅니다. 항상 조금 더 준비하세요.</div>
   </section>
 </main>
 
-<footer class="footer" data-i18n="footer">Runs entirely in your browser. No data is collected or stored.</footer>
+<footer class="footer" data-i18n="footer">전적으로 브라우저에서 실행됩니다. 데이터를 수집하거나 저장하지 않습니다.</footer>
 
 <script src="js/i18n.js"></script>
 <script src="js/calculator.js"></script>

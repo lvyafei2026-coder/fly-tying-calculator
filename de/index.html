@@ -61,22 +61,22 @@
   </div>
   <div class="hero-inner">
     <div class="hero-badge">🪝 Fly Tying</div>
-    <h1 data-i18n="title">Fly Tying Material Calculator</h1>
-    <p data-i18n="subtitle">Estimate thread, hackle, dubbing, and wire for any pattern — before you tie a single fly.</p>
+    <h1 data-i18n="title">Fliegenbinden-Materialrechner</h1>
+    <p data-i18n="subtitle">Schätzen Sie Faden, Hechel, Dubbing und Draht für jedes Muster — bevor Sie eine einzige Fliege binden.</p>
   </div>
 </header>
 
 <main class="wrap">
   <section class="card">
-    <h2 class="visually-hidden" data-i18n="calcHeading">Calculator</h2>
+    <h2 class="visually-hidden" data-i18n="calcHeading">Rechner</h2>
 
     <div class="row">
       <div>
-        <label for="quantity" data-i18n="qtyLabel">Number of flies</label>
+        <label for="quantity" data-i18n="qtyLabel">Anzahl der Fliegen</label>
         <input type="number" id="quantity" min="1" step="1" placeholder="24" value="24" inputmode="numeric">
       </div>
       <div>
-        <label for="hookSize" data-i18n="hookLabel">Hook size</label>
+        <label for="hookSize" data-i18n="hookLabel">Hakengröße</label>
         <select id="hookSize">
           <option value="2">#2</option>
           <option value="4">#4</option>
@@ -93,102 +93,102 @@
       </div>
     </div>
 
-    <label for="style" data-i18n="styleLabel">Fly style</label>
+    <label for="style" data-i18n="styleLabel">Fliegenstil</label>
     <select id="style">
-      <option value="dry" selected data-i18n="styleDry">Dry fly</option>
-      <option value="wet" data-i18n="styleWet">Wet fly</option>
-      <option value="nymph" data-i18n="styleNymph">Nymph</option>
+      <option value="dry" selected data-i18n="styleDry">Trockenfliege</option>
+      <option value="wet" data-i18n="styleWet">Nassfliege</option>
+      <option value="nymph" data-i18n="styleNymph">Nymphe</option>
       <option value="streamer" data-i18n="styleStreamer">Streamer</option>
     </select>
 
     <div class="row">
       <div>
-        <label for="threadPrice" data-i18n="threadLabel">Thread spool price ($)</label>
+        <label for="threadPrice" data-i18n="threadLabel">Bindfaden-Preis ($)</label>
         <input type="number" id="threadPrice" min="0" step="0.5" placeholder="4" value="4" inputmode="decimal">
       </div>
       <div>
-        <label for="hacklePrice" data-i18n="hackleLabel">Hackle price ($ per pack)</label>
+        <label for="hacklePrice" data-i18n="hackleLabel">Hechel-Preis ($ pro Packung)</label>
         <input type="number" id="hacklePrice" min="0" step="0.5" placeholder="12" value="12" inputmode="decimal">
       </div>
     </div>
 
-    <button class="calc" type="button" onclick="calculate()" data-i18n="calcBtn">Calculate materials</button>
+    <button class="calc" type="button" onclick="calculate()" data-i18n="calcBtn">Material berechnen</button>
 
     <div id="result" role="region" aria-live="polite">
-      <div class="result-label" data-i18n="resultLabel">Materials needed for</div>
+      <div class="result-label" data-i18n="resultLabel">Benötigtes Material für</div>
       <div class="total-flies"><span id="totalFlies">—</span></div>
 
       <div class="breakdown">
-        <div class="bd-row"><span data-i18n="bdThread">Thread</span><strong id="bdThread">—</strong></div>
-        <div class="bd-row"><span data-i18n="bdHackle">Hackle feathers</span><strong id="bdHackle">—</strong></div>
+        <div class="bd-row"><span data-i18n="bdThread">Bindfaden</span><strong id="bdThread">—</strong></div>
+        <div class="bd-row"><span data-i18n="bdHackle">Hecheln</span><strong id="bdHackle">—</strong></div>
         <div class="bd-row"><span data-i18n="bdDubbing">Dubbing</span><strong id="bdDubbing">—</strong></div>
-        <div class="bd-row"><span data-i18n="bdWire">Lead wire</span><strong id="bdWire">—</strong></div>
-        <div class="bd-row"><span data-i18n="bdHooks">Hooks</span><strong id="bdHooks">—</strong></div>
+        <div class="bd-row"><span data-i18n="bdWire">Bleidraht</span><strong id="bdWire">—</strong></div>
+        <div class="bd-row"><span data-i18n="bdHooks">Haken</span><strong id="bdHooks">—</strong></div>
         <div class="bd-divider"></div>
-        <div class="bd-row bd-total"><span data-i18n="bdCost">Estimated material cost</span><strong id="bdCost">—</strong></div>
+        <div class="bd-row bd-total"><span data-i18n="bdCost">Geschätzte Materialkosten</span><strong id="bdCost">—</strong></div>
       </div>
-      <div class="result-disclaimer" data-i18n="resultDisclaimer">Estimate only. Actual material usage varies by pattern, tying style, and individual technique. Always buy a little extra.</div>
+      <div class="result-disclaimer" data-i18n="resultDisclaimer">Nur eine Schätzung. Der tatsächliche Materialverbrauch variiert je nach Muster, Bindestil und individueller Technik. Kaufen Sie immer etwas extra.</div>
     </div>
   </section>
 
   <section>
-    <h2 data-i18n="whatIsTitle">How material usage is estimated</h2>
-    <p data-i18n="whatIsText">Fly tying material consumption depends on three main factors: the hook size (which determines the scale of the fly), the style of fly (dry, wet, nymph, or streamer), and the total quantity you plan to tie. This calculator combines these into a practical material shopping list so you can plan your session and budget before you sit at the vise.</p>
+    <h2 data-i18n="whatIsTitle">Wie der Materialverbrauch geschätzt wird</h2>
+    <p data-i18n="whatIsText">Der Materialverbrauch beim Fliegenbinden hängt von drei Hauptfaktoren ab: der Hakengröße (die die Größe der Fliege bestimmt), dem Fliegenstil (Trocken, Nass, Nymphe oder Streamer) und der Gesamtmenge, die Sie binden möchten. Dieser Rechner kombiniert diese zu einer praktischen Materialliste, damit Sie Ihre Sitzung und Ihr Budget planen können, bevor Sie sich an den Stock setzen.</p>
   </section>
 
   <section>
-    <h2 data-i18n="factorsTitle">What affects material usage</h2>
-    <h3 data-i18n="f1Title">Hook size</h3>
-    <p data-i18n="f1Text">A #4 streamer hook uses roughly 4 times the thread and materials of a #16 dry fly hook. As hook size increases (lower number), material needs scale up significantly.</p>
+    <h2 data-i18n="factorsTitle">Was den Materialverbrauch beeinflusst</h2>
+    <h3 data-i18n="f1Title">Hakengröße</h3>
+    <p data-i18n="f1Text">Ein #4 Streamer-Haken verbraucht etwa das 4-fache an Faden und Material eines #16 Trockenfliegen-Hakens. Mit zunehmender Hakengröße (kleinere Zahl) steigt der Materialbedarf deutlich.</p>
 
-    <h3 data-i18n="f2Title">Fly style</h3>
+    <h3 data-i18n="f2Title">Fliegenstil</h3>
     <ul>
-      <li data-i18n="f2a"><strong>Dry fly:</strong> baseline — light materials, hackle-heavy</li>
-      <li data-i18n="f2b"><strong>Wet fly:</strong> ~10% more thread, slightly more dubbing</li>
-      <li data-i18n="f2c"><strong>Nymph:</strong> ~20% more, plus lead wire for weight</li>
-      <li data-i18n="f2d"><strong>Streamer:</strong> ~60% more — larger hooks, more materials per fly</li>
+      <li data-i18n="f2a">Trockenfliege: Basis — leichtes Material, hechellastig</li>
+      <li data-i18n="f2b">Nassfliege: ~10% mehr Faden, etwas mehr Dubbing</li>
+      <li data-i18n="f2c">Nymphe: ~20% mehr, plus Bleidraht für Gewicht</li>
+      <li data-i18n="f2d">Streamer: ~60% mehr — größere Haken, mehr Material pro Fliege</li>
     </ul>
 
-    <h3 data-i18n="f3Title">Materials tracked</h3>
+    <h3 data-i18n="f3Title">Verfolgte Materialien</h3>
     <ul>
-      <li data-i18n="f3a"><strong>Thread:</strong> measured in meters — the backbone of every fly</li>
-      <li data-i18n="f3b"><strong>Hackle:</strong> feathers wrapped around the hook for legs and movement</li>
-      <li data-i18n="f3c"><strong>Dubbing:</strong> fur or synthetic blend for the body</li>
-      <li data-i18n="f3d"><strong>Lead wire:</strong> for weight, used mainly in nymphs and streamers</li>
-      <li data-i18n="f3e"><strong>Hooks:</strong> one per fly (plus a few for practice)</li>
+      <li data-i18n="f3a">Faden: in Metern gemessen — das Rückgrat jeder Fliege</li>
+      <li data-i18n="f3b">Hechel: Federn, die um den Haken gewickelt werden, für Beine und Bewegung</li>
+      <li data-i18n="f3c">Dubbing: Fell oder synthetische Mischung für den Körper</li>
+      <li data-i18n="f3d">Bleidraht: für Gewicht, hauptsächlich bei Nymphen und Streamern</li>
+      <li data-i18n="f3e">Haken: einer pro Fliege (plus ein paar zum Üben)</li>
     </ul>
   </section>
 
   <section>
-    <h2 data-i18n="howToTitle">How to use this calculator</h2>
+    <h2 data-i18n="howToTitle">Verwendung</h2>
     <ol>
-      <li data-i18n="howTo1">Enter the number of flies you plan to tie.</li>
-      <li data-i18n="howTo2">Choose your hook size — this is the biggest factor.</li>
-      <li data-i18n="howTo3">Select the fly style you're tying.</li>
-      <li data-i18n="howTo4">Enter current prices for thread and hackle to see material cost.</li>
-      <li data-i18n="howTo5">Click "Calculate materials" to see your shopping list.</li>
+      <li data-i18n="howTo1">Geben Sie die Anzahl der Fliegen ein, die Sie binden möchten.</li>
+      <li data-i18n="howTo2">Wählen Sie Ihre Hakengröße — dies ist der größte Faktor.</li>
+      <li data-i18n="howTo3">Wählen Sie den Fliegenstil, den Sie binden.</li>
+      <li data-i18n="howTo4">Geben Sie aktuelle Preise für Faden und Hechel ein, um die Materialkosten zu sehen.</li>
+      <li data-i18n="howTo5">Klicken Sie auf "Material berechnen", um Ihre Einkaufsliste zu sehen.</li>
     </ol>
   </section>
 
   <section>
-    <h2 data-i18n="faqTitle">Frequently asked questions</h2>
-    <h3 data-i18n="faq1q">How much thread does one fly use?</h3>
-    <p data-i18n="faq1a">A typical #14 dry fly uses about 40–60 cm of thread. A #4 streamer can use 1.5–2 meters. A standard 100-meter spool of 8/0 thread can tie roughly 200–300 dry flies or 50–70 streamers.</p>
+    <h2 data-i18n="faqTitle">Häufig gestellte Fragen</h2>
+    <h3 data-i18n="faq1q">Wie viel Faden verbraucht eine Fliege?</h3>
+    <p data-i18n="faq1a">Eine typische #14 Trockenfliege verbraucht etwa 40–60 cm Faden. Ein #4 Streamer kann 1,5–2 Meter verbrauchen. Eine Standard-100-Meter-Spule 8/0 Faden reicht für etwa 200–300 Trockenfliegen oder 50–70 Streamer.</p>
 
-    <h3 data-i18n="faq2q">How many flies can I tie with one hackle pack?</h3>
-    <p data-i18n="faq2a">A quality dry fly hackle pack (like Whiting or Metz) contains enough feathers for 100–300 flies, depending on hook size. Smaller hooks (#18–22) use less hackle per fly and stretch farther.</p>
+    <h3 data-i18n="faq2q">Wie viele Fliegen kann ich mit einer Hechelpackung binden?</h3>
+    <p data-i18n="faq2a">Eine hochwertige Trockenfliegen-Hechelpackung (wie Whiting oder Metz) enthält genug Federn für 100–300 Fliegen, je nach Hakengröße. Kleinere Haken (#18–22) verbrauchen weniger Hechel pro Fliege und reichen weiter.</p>
 
-    <h3 data-i18n="faq3q">Do I really need lead wire?</h3>
-    <p data-i18n="faq3a">For nymphs and streamers that need to sink quickly, yes. For dry flies, never — weight would prevent them from floating. Many modern tyers use tungsten or lead-free wire alternatives, which are denser and more environmentally friendly.</p>
+    <h3 data-i18n="faq3q">Brauche ich wirklich Bleidraht?</h3>
+    <p data-i18n="faq3a">Für Nymphen und Streamer, die schnell sinken müssen, ja. Für Trockenfliegen niemals — Gewicht würde sie am Schwimmen hindern. Viele moderne Binder verwenden Tungsten- oder bleifreie Drahtalternativen, die dichter und umweltfreundlicher sind.</p>
 
-    <h3 data-i18n="faq4q">Why buy extra materials?</h3>
-    <p data-i18n="faq4a">Materials get wasted in three ways: mistakes while learning a new pattern, variation between flies (some come out heavier than others), and loss during fishing. Buy 20–30% more than the calculator suggests, especially for a new pattern.</p>
+    <h3 data-i18n="faq4q">Warum extra Material kaufen?</h3>
+    <p data-i18n="faq4a">Material wird auf drei Arten verschwendet: Fehler beim Erlernen eines neuen Musters, Variationen zwischen Fliegen (manche werden schwerer), und Verlust beim Fischen. Kaufen Sie 20–30% mehr als der Rechner vorschlägt, besonders bei einem neuen Muster.</p>
 
-    <div class="disclaimer" data-i18n="disclaimer"><strong>Note:</strong> This is an estimate for planning purposes. Actual material usage varies by pattern and individual tying style. Always start with a little extra on hand.</div>
+    <div class="disclaimer" data-i18n="disclaimer"><strong>Hinweis:</strong> Dies ist eine Schätzung zu Planungszwecken. Der tatsächliche Materialverbrauch variiert je nach Muster und individuellem Bindestil. Beginnen Sie immer mit etwas extra.</div>
   </section>
 </main>
 
-<footer class="footer" data-i18n="footer">Runs entirely in your browser. No data is collected or stored.</footer>
+<footer class="footer" data-i18n="footer">Läuft vollständig in Ihrem Browser. Es werden keine Daten gesammelt oder gespeichert.</footer>
 
 <script src="js/i18n.js"></script>
 <script src="js/calculator.js"></script>
