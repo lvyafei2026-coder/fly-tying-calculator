@@ -56,5 +56,6 @@
   "faq4a": "Los materiales se desperdician de tres maneras: errores al aprender un nuevo patrón, variación entre moscas (algunas salen más pesadas), y pérdida durante la pesca. Compre un 20–30% más de lo que sugiere la calculadora, especialmente para un patrón nuevo.",
   "disclaimer": "<strong>Nota:</strong> Esta es una estimación para fines de planificación. El uso real varía según el patrón y el estilo de montaje individual. Siempre empiece con un poco extra a mano.",
   "footer": "Se ejecuta completamente en su navegador. No se recopilan ni almacenan datos.",
-  "alertQty": "Por favor introduzca el número de moscas."
+  "alertQty": "Por favor introduzca el número de moscas.",
+  "heroBadge": "🪝 Montaje de moscas"
 }
